@@ -1,0 +1,24 @@
+.header {
+  font-family: 'Roboto';
+  // height: 70px;
+  background: #00a468;
+  font-size: 22px;
+  margin: 0 0 20px;
+  // .header__navmenu
+
+  &__navmenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // .header__navmenu-list
+
+  &__navmenu-list {
+    padding: 35px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  } 
+}
+
