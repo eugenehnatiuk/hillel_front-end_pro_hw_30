@@ -3,11 +3,11 @@ import './counter.scss';
 
 const Counter = ({ sectionClass, initialValue }) => {
   const [count, setCount] = useState(initialValue);
-  const [isNegative, setIsNegative] = useState(false);
+  // const [isNegative, setIsNegative] = useState(false);
 
-  useEffect(() => {
-    setIsNegative(count < 0);
-  }, [count]);
+  // useEffect(() => {
+  //   setIsNegative(count < 0);
+  // }, [count]);
 
   const increment = () => setCount((prevCount) => prevCount + 1);
   const decrement = () => setCount((prevCount) => prevCount - 1);
@@ -22,8 +22,11 @@ const Counter = ({ sectionClass, initialValue }) => {
         </button>
         <span
           className={
-            isNegative ? 'main-section__count--zero' : ' main-section__count'
+            count < 0 ? 'main-section__count--zero' : ' main-section__count'
           }
+          // className={
+          //   isNegative ? 'main-section__count--zero' : ' main-section__count'
+          // }
         >
           {count}
         </span>
